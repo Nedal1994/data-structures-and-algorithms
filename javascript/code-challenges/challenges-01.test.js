@@ -72,21 +72,16 @@ each string modified by the callback. Return the new array.
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  let newArr = [];
-  arr.forEach(word => 
-    {
-      newArr.push(word.toUpperCase())
-    });
-  return newArr;
+return word.toUpperCase() + "!"
 };
 
 const speaker = (words, callback) => {
   let newArr = [];
-  arr.forEach(word => 
+  word.forEach(item => 
     {
-      newArr.push(word.toUpperCase() + "!")
+      newArr.push(callback(element))
     });
-  return greeting;
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -137,7 +132,15 @@ This function should use forEach to populate your grocery list
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-
+  let newArr = [];
+  availableItems.forEach(item => 
+    {
+      if(item.available === true)
+      {
+        newArr.push(item.name); 
+      }
+    });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
