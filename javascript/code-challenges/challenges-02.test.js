@@ -11,7 +11,12 @@ raised to the 3rd power (hint: look up Math.pow()). Use forEach to solve this pr
 ------------------------------------------------------------------------------------------------ */
 
 const raisedToTheThird = (arr) => {
-  // Solution code here...
+  let newArr=[];
+  arr.forEach(item =>
+   {
+     newArr.push(Math.pow(element,3))
+   })
+   return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -75,7 +80,12 @@ output as your forLoopTwoToThe function from challenge 4,
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  // Solution code here...
+  let newArr=[];
+  arr.forEach(item =>
+   {
+     newArr.push(Math.pow(2,element))
+   })
+   return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -87,7 +97,12 @@ function from challenge 5, but uses map instead of a for loop or forEach.
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  // Solution code here...
+  let newArr=[];
+  arr.forEach(item =>
+   {
+     newArr.push(Math.pow(2,element))
+   })
+   return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
