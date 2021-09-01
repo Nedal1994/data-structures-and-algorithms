@@ -12,11 +12,11 @@ raised to the 3rd power (hint: look up Math.pow()). Use forEach to solve this pr
 
 const raisedToTheThird = (arr) => {
   let newArr=[];
-  arr.forEach(item =>
+  arr.forEach(element =>
    {
      newArr.push(Math.pow(element,3))
    })
-   return newArr;
+   return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -27,14 +27,11 @@ uses map to return a new array with each value simply incremented by 1.
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
-  let newArr=[];
-  arr.forEach(item =>
+  let newArr=arr.map(item =>
    {
-     newArr.push(item+1)
+     return item+1
    })
    return newArr;
-
- 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,13 +43,13 @@ by a question mark character.
 ------------------------------------------------------------------------------------------------ */
 
 const addQuestion = (arr) => {
-  let newArr=[];
-  arr.forEach(item =>
-   {
-     newArr.push(item+"?")
-   })
-   return newArr;
-};
+  let newArr=arr.map(item =>
+    {
+      return item+"?"
+    })
+    return newArr;
+ };
+ 
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -68,7 +65,12 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
-  // Solution code here...
+  let newArr=[]
+  for(let i=0;i<arr.length;i++)
+  {
+    newArr.push(Math.pow(2,arr[i]))
+  }
+  return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -81,12 +83,12 @@ output as your forLoopTwoToThe function from challenge 4,
 
 const forEachTwoToThe = (arr) => {
   let newArr=[];
-  arr.forEach(item =>
+  arr.forEach(element =>
    {
      newArr.push(Math.pow(2,element))
    })
-   return newArr;
-};
+   return newArr
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -97,13 +99,12 @@ function from challenge 5, but uses map instead of a for loop or forEach.
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  let newArr=[];
-  arr.forEach(item =>
-   {
-     newArr.push(Math.pow(2,element))
-   })
-   return newArr;
-};
+  let newArr=arr.map(item =>
+    {
+      return Math.pow(2,item)
+    })
+    return newArr;
+ };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
