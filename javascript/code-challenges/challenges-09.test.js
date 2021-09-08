@@ -3,7 +3,8 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function that finds the maximum value in an array
+Write a function that finds the
+ maximum value in an array
 using the 'reduce' method.
 
 E.g. [4,2,7,5,9,2] -> 9
@@ -21,10 +22,10 @@ const maxInArray = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named getCourseKeys that 
-takes in the courseInfo object and returns 
-an array containing the keys for the 
-courseInfo object.
+Write a function named getCourseKeys 
+that takes in the courseInfo object and 
+returns an array containing the keys for 
+the courseInfo object.
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
@@ -42,14 +43,23 @@ const getCourseKeys = (obj) => {
 CHALLENGE 3
 
 Write a function named checkValues 
-that takes in an object and a value 
-and returns true if the value is in the object.
+that takes in an 
+object and a value and returns 
+true if the value is in the object.
 
 
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
- 
+  if(Object.values(obj,value))
+  {
+    return true
+  }
+  else
+  {
+    return false
+  }
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -72,8 +82,8 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ------------------------------------------------------------------------------------------------ */
 
 const updateNumbers = (obj) => {
-  let newArr = Object.values(obj)
-  return true
+  let newArr = Object.keys(obj)
+  return newArr
 };
 
 
@@ -81,9 +91,9 @@ const updateNumbers = (obj) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named getHouses 
-that returns a new array containing 
-the names of all of the houses in the data set.
+Write a function named getHouses that returns 
+a new array containing the names of all 
+of the houses in the data set.
 ------------------------------------------------------------------------------------------------ */
 
 const characters = [
@@ -131,7 +141,7 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  houses = Object.values(arr[0].house)
+  houses=Object.values(house)
   return houses;
 };
 
@@ -142,9 +152,8 @@ Write a function named hasChildrenValues
 that uses Object.values to determine if 
 any given character in the data set has children.
 
-This function should take in an 
-array of data and a character name 
-and return a Boolean.
+This function should take in an array 
+of data and a character name and return a Boolean.
 
 For example:
 hasChildrenValues(characters, 'Cersei') will return true
@@ -152,18 +161,7 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
- let newArr = Object.values((arr) =>{
-    if(character === 'Cersei')
- {
-   return true
- }
- else
- {
-   return false
- }
- 
- }) 
- return newArr
+  
 
 };
 
