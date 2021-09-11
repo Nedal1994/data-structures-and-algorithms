@@ -12,10 +12,8 @@ E.g. [4,2,7,5,9,2] -> 9
 const maxInArray = (arr) => {
   let newArr = arr.reduce((acc,val)=>
   {
-    acc = 9
-    return acc
-
-  },{})
+    return Math.max(acc,val)
+  })
   return newArr
 };
 
@@ -51,15 +49,7 @@ true if the value is in the object.
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
-  if(Object.values(obj,value))
-  {
-    return true
-  }
-  else
-  {
-    return false
-  }
-
+  return Object.values(obj).includes(value)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -82,7 +72,12 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ------------------------------------------------------------------------------------------------ */
 
 const updateNumbers = (obj) => {
-  let newArr = Object.keys(obj)
+  let newArr = []
+  Object.entries(obj).forEach((item)=>{
+    let i = item.join(': ')
+    newArr.push(i)
+  })
+
   return newArr
 };
 
@@ -141,7 +136,9 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  houses=Object.values(house)
+  arr.forEach((item)=>{
+    houses.push(item.house)
+  })
   return houses;
 };
 
