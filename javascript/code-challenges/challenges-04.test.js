@@ -4,18 +4,17 @@
 CHALLENGE 1 - Review
 
 Write a function named addAnimal 
-that takes in array of animals (strings) 
-and some callback function.
+that takes in array of animals 
+(strings) and some callback function.
 
-This function should first create a new array.
- Then iterate over the input array and modify
-  each value based on the callback function provided.
+This function should first create a new array. 
+Then iterate over the input array and modify 
+each value based on the callback function provided.
 
 Push each updated animal string into the new array. 
 Return the new array.
 
-HINT: Look at the tests to see how 
-the callback functions are used.
+HINT: Look at the tests to see how the callback functions are used.
 
 ------------------------------------------------------------------------------------------------ */
 
@@ -28,53 +27,28 @@ function lower(str) {
 }
 
 const updateAnimal = (arr, callback) => {
-  // Solution code here...
+  let newArr=[]
+  arr.map((item)=>{
+    newArr.push(callback(item))
+  })
+  return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function called 
-sortNames that takes an 
-array of names and sorts them 
-alphabetically.
- Capital letters should 
- come before lowercase letters.
+Write a function called sortNames that takes an 
+array of names and sorts them alphabetically. 
+Capital letters should come before lowercase letters.
 
 For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
 
 const sortNames = (arr) => {
-  arr.sort((a,b) =>
-  {
-    if(a<b)
-    {
-      return -1;
-    }
-    else
-    {
-      return 0
-    }
-  })
-  return arr
-};
-
-/* ------------------------------------------------------------------------------------------------
-CHALLENGE 3
-
-Write a function called sortNumbers
- that takes an array of numbers and 
- sorts them from smallest to largest.
-
-HINT: Beware... JS default is "Lexical" ordering.
------------------------------------------------------------------------------------------------- */
-
-const sortNumbers = (arr) => {
-  arr.sort((a,b) =>
-  {
+  let newArr=arr.sort((a,b)=>{
     if(a>b)
     {
-      return 1;
+      return 1
     }
     else if(a<b)
     {
@@ -85,26 +59,52 @@ const sortNumbers = (arr) => {
       return 0
     }
   })
-  return arr
+  return newArr
+};
+
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 3
+
+Write a function called sortNumbers that 
+takes an array of numbers and sorts them 
+from smallest to largest.
+
+HINT: Beware... JS default is "Lexical" ordering.
+------------------------------------------------------------------------------------------------ */
+
+const sortNumbers = (arr) => {
+  let newArr=arr.sort((a,b)=>{
+    if(a>b)
+    {
+      return 1
+    }
+    else if(a<b)
+    {
+      return -1
+    }
+    else
+    {
+      return 0
+    }
+  })
+  return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named sortBackwards 
-that takes in an array of numbers and 
-returns the same array, with the numbers
- sorted, largest to smallest.
+Write a function named sortBackwards that takes 
+in an array of numbers and returns the same array, 
+with the numbers sorted, largest to smallest.
 
 HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  arr.sort((a,b) =>
-  {
+  let newArr=arr.sort((a,b)=>{
     if(a<b)
     {
-      return 1;
+      return 1
     }
     else if(a>b)
     {
@@ -115,46 +115,46 @@ const sortBackwards = (arr) => {
       return 0
     }
   })
-  return arr
+  return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named alphabetize that 
-takes in an array of strings and returns 
-the same array with the strings sorted alphabetically.
+Write a function named alphabetize that takes in an 
+array of strings and returns the same array with the 
+strings sorted alphabetically.
 
-In this alphabetization, capital letters 
-come before lower case letters.
+In this alphabetization, capital letters come before lower case letters.
 
-For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] 
-is correctly sorted.
+For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
-  arr.sort((a,b) =>
-  {
-    if(a<b)
+  let newArr=arr.sort((a,b)=>{
+    if(a>b)
     {
-      return -1;
+      return 1
+    }
+    else if(a<b)
+    {
+      return -1
     }
     else
     {
       return 0
     }
   })
-  return arr
+  return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named sortByPrice
- that takes in an array of objects,
-  each of which has a 'price' property,
-   and sorts those objects by price, 
-   lowest to highest, returning the same array.
+Write a function named sortByPrice that 
+takes in an array of objects, 
+each of which has a 'price' property, and sorts those 
+objects by price, lowest to highest, returning the same array.
 
 Here is an example of the input:
 [
@@ -165,22 +165,21 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  arr.sort((a,b) =>
-  {
+  let newArr=arr.sort((a,b)=>{
     if(a.price>b.price)
     {
-      return 1;
+      return 1
     }
     else if(a.price<b.price)
     {
-      return -1;
+      return -1
     }
     else
     {
       return 0
     }
   })
-  return arr
+  return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
