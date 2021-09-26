@@ -4,62 +4,67 @@
 
 CHALLENGE 1 - Review
 
-Write a function named raisedToTheThird that takes in
-an array of numbers and returns a new array of each of those numbers
-raised to the 3rd power (hint: look up Math.pow()). Use forEach to solve this problem.
+Write a function named raisedToTheThird 
+that takes in an array of numbers and returns 
+a new array of each of those numbers raised to 
+the 3rd power (hint: look up Math.pow()). 
+Use forEach to solve this problem.
 
 ------------------------------------------------------------------------------------------------ */
 
 const raisedToTheThird = (arr) => {
-  let newArr=[];
-  arr.forEach(element =>
-   {
-     newArr.push(Math.pow(element,3))
-   })
-   return newArr
+  let newArr=[]
+  arr.forEach((item)=>{
+    newArr.push(Math.pow(item,3))
+  })
+  return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named addOne that, given an array of numbers,
-uses map to return a new array with each value simply incremented by 1. 
+Write a function named addOne that, 
+given an array of numbers, uses map 
+to return a new array with each value 
+simply incremented by 1. 
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
-  let newArr=arr.map(item =>
-   {
-     return item+1
-   })
-   return newArr;
+  let newArr=[]
+  arr.map((item)=>{
+    newArr.push(item+1)
+  })
+  return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named addQuestion that, given an array of strings,
-uses map to return a new array containing each string followed 
-by a question mark character.
+Write a function named addQuestion that, 
+given an array of strings, uses map to return 
+a new array containing each string followed by 
+a question mark character.
 ------------------------------------------------------------------------------------------------ */
 
 const addQuestion = (arr) => {
-  let newArr=arr.map(item =>
-    {
-      return item+"?"
-    })
-    return newArr;
- };
- 
+  let newArr=[]
+  arr.map((item)=>{
+    newArr.push(item + `?`)
+  })
+  return newArr
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named forLoopTwoToThe that, given an array of
-integers as input, iterates over the array and returns a new array.
-The returned array should contain the result of raising 2
- to the power of the original input element.
+Write a function named forLoopTwoToThe that, 
+given an array of integers as input, iterates 
+over the array and returns a new array. 
+The returned array should contain the result of 
+raising 2 to the power of the original input element.
 
-You may choose to complete this challenge using a for loop, for...in syntax, or for...of syntax.
+You may choose to complete this challenge 
+using a for loop, for...in syntax, or for...of syntax.
 
 For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and 2 ^ 3 = 8.
 ------------------------------------------------------------------------------------------------ */
@@ -76,42 +81,44 @@ const forLoopTwoToThe = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named forEachTwoToThe that produces the same
-output as your forLoopTwoToThe function from challenge 4,
- but uses forEach instead of a for loop.
+Write a function named forEachTwoToThe that 
+produces the same output as your forLoopTwoToThe 
+function from challenge 4, but uses forEach instead 
+of a for loop.
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  let newArr=[];
-  arr.forEach(element =>
-   {
-     newArr.push(Math.pow(2,element))
-   })
-   return newArr
-  };
+  let newArr=[]
+  arr.forEach((item)=>{
+    newArr.push(Math.pow(2,item))
+  })
+  return newArr
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named mapTwoToThe that produces the same output
-as your forLoopTwoToThe function from challenge 4 and your forEachTwoToThe
-function from challenge 5, but uses map instead of a for loop or forEach.
+Write a function named mapTwoToThe that produces 
+the same output as your forLoopTwoToThe function 
+from challenge 4 and your forEachTwoToThe function 
+from challenge 5, but uses map instead of a for loop or forEach.
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  let newArr=arr.map(item =>
-    {
-      return Math.pow(2,item)
-    })
-    return newArr;
- };
+  let newArr=[]
+  arr.map((item)=>{
+    newArr.push(Math.pow(2,item))
+  })
+  return newArr
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
-Write a function named charCode that, given an array of
-letters as an input, uses map to return a new array where each
-element is the result of the `charCodeAt`
+Write a function named charCode that, 
+given an array of letters as an input, 
+uses map to return a new array where each 
+element is the result of the `charCodeAt` 
 method on the original array element.
 
 Read the MDN documentation on String.charCodeAt() if necessary.
@@ -120,18 +127,14 @@ For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
 const charCode = (arr) => {
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
 
-Write a function that, given an array of numbers as input,
-uses map to return a new array where each element is either
-the string "even" or the string "odd", based on each value.
+Write a function that, given an array of numbers as input, uses map to return a new array where each element is either the string "even" or the string "odd", based on each value.
 
-If any element in the array is not a number,
-the resulting array should have the string "N/A" in its place.
+If any element in the array is not a number, the resulting array should have the string "N/A" in its place.
 
 For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
