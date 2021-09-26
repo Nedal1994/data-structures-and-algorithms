@@ -3,8 +3,8 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function that finds the
- maximum value in an array
+Write a function that finds the 
+maximum value in an array
 using the 'reduce' method.
 
 E.g. [4,2,7,5,9,2] -> 9
@@ -21,9 +21,9 @@ const maxInArray = (arr) => {
 CHALLENGE 2
 
 Write a function named getCourseKeys 
-that takes in the courseInfo object and 
-returns an array containing the keys for 
-the courseInfo object.
+that takes in the courseInfo object 
+and returns an array containing the 
+keys for the courseInfo object.
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
@@ -40,10 +40,9 @@ const getCourseKeys = (obj) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named checkValues 
-that takes in an 
-object and a value and returns 
-true if the value is in the object.
+Write a function named checkValues that takes 
+in an object and a value and returns true if 
+the value is in the object.
 
 
 ------------------------------------------------------------------------------------------------ */
@@ -55,14 +54,16 @@ const checkValues = (obj, value) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-You are given an object with names and their coresponding phone numbers that looks like this:
+You are given an object with names and their 
+coresponding phone numbers that looks like this:
 {
   'Grace Hopper': '222-303-5938',
   'Ada Lovelace': '222-349-9842',
   'Alan Turing': '222-853-5933'
 }
 
-HR has asked you to change the data to make it easier to print so that it looks like this:
+HR has asked you to change the data to make 
+it easier to print so that it looks like this:
 [
   'Grace Hopper: 222-303-5938',
   'Ada Lovelace: 222-349-9842',
@@ -86,9 +87,8 @@ const updateNumbers = (obj) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named getHouses that returns 
-a new array containing the names of all 
-of the houses in the data set.
+Write a function named getHouses that returns a new array 
+containing the names of all of the houses in the data set.
 ------------------------------------------------------------------------------------------------ */
 
 const characters = [
@@ -145,9 +145,8 @@ const getHouses = (arr) => {
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named hasChildrenValues 
-that uses Object.values to determine if 
-any given character in the data set has children.
+Write a function named hasChildrenValues that uses Object.values 
+to determine if any given character in the data set has children.
 
 This function should take in an array 
 of data and a character name and return a Boolean.
@@ -158,9 +157,7 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  
-
-};
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
