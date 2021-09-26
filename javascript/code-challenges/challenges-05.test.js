@@ -12,12 +12,12 @@ Note the space in between first and last names.
 You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
-  let newArr = people.reduce((acc,val)=>
-  {
-    acc = ['Jane Doe','James Bond']
-    return acc
+  
+  let newArr=people.map((item)=>{
 
-  },{})
+    return item.firstName + ' ' + item.lastName
+
+  })
   return newArr
 };
 
@@ -25,18 +25,19 @@ const toLastNames = people => {
 CHALLENGE 2
 
 Write a function named addValues that, 
-given an array of numbers as input, uses 
-reduce to add the values in the array.
+given an array of numbers as input, 
+uses reduce to add the values in the array.
 
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr) => {
-let newArr = arr.reduce((acc,val,idx)=>
-{
-  acc = acc + val
-  return acc
-},0)
-return newArr
+ let newArr= arr.reduce((acc,val)=>{
+
+    acc = acc + val
+    return acc
+
+  },0)
+  return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,9 +45,9 @@ CHALLENGE 3
 
 Write a function named addPurchases that, 
 given an array of objects as input, uses 
-reduce to find the total amount purchased.
- Each object contains the keys `item` and 
- `purchasePrice` like the example.
+reduce to find the total amount purchased. 
+Each object contains the keys `item` and 
+`purchasePrice` like the example.
 
 {
   item: 'switch'
@@ -56,12 +57,14 @@ reduce to find the total amount purchased.
 ------------------------------------------------------------------------------------------------ */
 
 const addPurchases = (arr) => {
-  let newArr = arr.reduce((acc,val,idx)=>
-  {
+  let newArr= arr.reduce((acc,val)=>{
+
     acc += val.purchasePrice
     return acc
+
   },0)
-  return newArr};
+  return newArr
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -74,20 +77,20 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  let newArr = arr.reduce((acc,val,idx)=>
-  {
-    acc = acc + val
+  let newArr= arr.reduce((acc)=>{
+
     return acc
-  },-10)
-  return newArr};
+
+  },arr.length)
+  return newArr
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named returnNames that,
- given the Star Wars data, below, uses 
- reduce to return an array containing the 
- names of the characters.
+Write a function named returnNames that, 
+given the Star Wars data, below, uses reduce 
+to return an array containing the names of the characters.
 ------------------------------------------------------------------------------------------------ */
 
 let starWarsData = [{
@@ -141,32 +144,32 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  let newArr = arr.reduce((acc,val)=>
+  let newArr=arr.reduce((acc,val)=>
   {
-    acc = ['Luke Skywalker','C-3PO','R2-D2','Darth Vader','Leia Organa']
+    acc.push(val.name)
     return acc
 
-  },{})
+  },[])
   return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named reversedString 
-that takes in a string and returns a 
-string with the letters in reverse order.
+Write a function named reversedString that takes in a 
+string and returns a string with the letters in reverse order.
 
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  let newArr = str.reduce((acc,val)=>
+  let newArr=str.split('').reduce((acc,val)=>
   {
-    acc = ['103 edoC']
+
+    acc = val + acc
     return acc
 
-  },{})
+  })
   return newArr
 };
 
