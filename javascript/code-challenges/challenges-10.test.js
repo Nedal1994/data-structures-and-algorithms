@@ -3,36 +3,22 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function named returnTen,
- takes in a string and uses split
-  and splice to return the last 10 
-  characters from that string as elements of an array.
+Write a function named returnTen, takes in a string 
+and uses split and splice to return the last 10 characters 
+from that string as elements of an array.
 
 ------------------------------------------------------------------------------------------------ */
 
 function returnTen(str){
-  let array = str.split('')
-  for(let i=0;i<array.length;i++)
-  {
-    if(array.length>10)
-    {
-      let newArr = array.splice(0,1)
-      return array
-    }
-    else
-    {
-      return array
-    }
-  }
+  return str.split('').splice(-10)
 }
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named findMax 
-that takes in a matrix of positive 
-numbers and returns the number with 
-the highest value.
+Write a function named findMax that takes in a 
+matrix of positive numbers and returns the number 
+with the highest value.
 
 For example:
 [
@@ -62,7 +48,8 @@ return total
 CHALLENGE 3
 
 Write a function named totalSum that takes in a 
-matrix of numbers and returns the totalSum of all the numbers.
+matrix of numbers and returns the totalSum 
+of all the numbers.
 
 For example:
 [
@@ -89,11 +76,10 @@ return total
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-You friend Pat has a chain of stores around 
-the greater Seattle area. He specializes in selling 
-salmon cookies. Pat has data for the hourly sales of cookies 
-per hour for each store. He wants to create an array of the total number 
-of cookies sold per hour for all of his stores combined.
+You friend Pat has a chain of stores around the greater Seattle area. 
+He specializes in selling salmon cookies. Pat has data for the hourly 
+sales of cookies per hour for each store. He wants to create an array 
+of the total number of cookies sold per hour for all of his stores combined.
 
 Write a function named grandTotal that adds up the cookies sales for 
 each hour of operation for all of the stores combined. For example, 
@@ -102,7 +88,8 @@ cookies sold in the 9:00 a.m. hour at all five stores combined.
 
 For this example, the total at 9:00 a.m. is 17 + 26 + 7 + 5 + 33, or 88 total cookies.
 
-Return the array of the total number of cookies sold per hour for all of the stores combined.
+Return the array of the total number of cookies 
+sold per hour for all of the stores combined.
 ------------------------------------------------------------------------------------------------ */
 
 const hoursOpen = ['9 a.m.', '10 a.m.', '11 a.m.', '12 p.m.', '1 p.m.', '2 p.m.', '3 p.m.', '4 p.m.', '5 p.m.', '6 p.m.', '7 p.m.', '8 p.m.'];
@@ -116,34 +103,46 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
+  let newArr =[]
+  let result = 0
+  for(let i=0;i<12;i++)
+  {
+    result =0
+    for(let j=0;j<stores.length;j++)
+    {
+      result = result + stores[j][i]
+    }
+    newArr[i] = result
+  }
+  return newArr
 
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Pat has decided that he would also like to organize 
-his data as objects containing the number of cookies 
-sold per hour and the time.
+Pat has decided that he would also like to 
+organize his data as objects containing the 
+number of cookies sold per hour and the time.
 
 Here is sample data for the 9:00 sales: { sales: '88 cookies', time: '9 a.m.' }.
 
-Write a function named salesData that uses forEach 
-to iterate over the hourlySales array and create an 
-object for each hour. Return an array of the formatted data.
+Write a function named salesData that uses 
+forEach to iterate over the hourlySales array 
+and create an object for each hour. 
+Return an array of the formatted data.
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-
-  
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named howManyTreats that will 
-return the quantity of treats you need to pick 
-up from the pet store today from this array. 
+Write a function named howManyTreats that will return the 
+quantity of treats you need to pick up from the pet store 
+today from this array. 
 The structure of the array will not change.
 ------------------------------------------------------------------------------------------------ */
 
@@ -163,7 +162,7 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
