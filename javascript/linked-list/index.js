@@ -12,11 +12,6 @@ x.include(1)
 x.include(2)
 x.include(3)
 
-// I tried to work on the string function & it didn't work
+console.log(x.toString())
 
-// x.string(a)
-// x.string(b)
-// x.string(c)
-
-
-console.log(x)
+// console.log(x)
