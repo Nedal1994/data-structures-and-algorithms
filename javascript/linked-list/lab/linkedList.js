@@ -9,12 +9,30 @@ class LinkedList {
     }
 
 
-insertBefore(value, newNode)
+insertBefore(location, newValue)
 {
-    const node = new Node(newNode)
     if (!this.head) {
-        return 'error'
+        return null
     }
+    let newNode = new Node(newValue)
+    let current = this.head
+    if(this.head.value === location)
+    {
+        newNode.next = this.head
+        this.head = newNode
+        return true
+    }
+    while(current.next !== null)
+    {
+        if(current.next.value === location)
+        {
+            newNode.next = current.next
+            current.next = newNode
+            return true
+        }
+        current = current.next
+    }
+    return null
 }
 
 insert(value)
@@ -28,10 +46,28 @@ insert(value)
 
 insertAfter(value, newNode)
 {
-    const node = new Node(newNode)
     if (!this.head) {
-        return 'error'
+        return null
     }
+    let newNode = new Node(newValue)
+    let current = this.head
+    if(this.head.value === location)
+    {
+        newNode.next = this.head
+        this.head = newNode
+        return true
+    }
+    while(current !== null)
+    {
+        if(current.value === location)
+        {
+            newNode.next = current.next
+            newNode = current.next
+            return true
+        }
+        current = current.next
+    }
+    return null
 }
 
 include(value)
