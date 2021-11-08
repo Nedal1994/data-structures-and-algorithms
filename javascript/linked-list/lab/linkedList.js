@@ -102,6 +102,23 @@ toString()
     finalString += `{${currentNode.value}} -> NULL`
     return finalString
 }
+
+kthFromEnd(k)
+{
+    let current = this.head
+    let count = 0
+
+    while(current !== null)
+    {
+        if(count === k)
+        {
+            return current
+        }
+        count++
+        current = current.next
+    }
+    return false
+}
 }
 
 

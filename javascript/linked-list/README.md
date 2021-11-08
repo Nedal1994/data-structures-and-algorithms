@@ -1,6 +1,7 @@
 ## Code challenge 6 whiteboard
 
 ![code6](code6.png)
+![code7](code7.png)
 
 # Singly Linked List
 The topic of this challenge is based on the linked list which is based on implementing nodes to certain point where you can find values & move on to the next node.
