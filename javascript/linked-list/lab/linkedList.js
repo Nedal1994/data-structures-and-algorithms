@@ -44,25 +44,23 @@ insert(value)
     this.head = node
 }
 
-insertAfter(value, newNode)
+insertAfter(value,newValue)
 {
-    if (!this.head) {
-        return null
-    }
     let newNode = new Node(newValue)
     let current = this.head
+
     if(this.head.value === location)
     {
-        newNode.next = this.head
+        newNode.next = current.next
         this.head = newNode
         return true
     }
-    while(current !== null)
+    while(current.next !== null)
     {
-        if(current.value === location)
+        if(current.next.value === location)
         {
             newNode.next = current.next
-            newNode = current.next
+            current.next = newNode
             return true
         }
         current = current.next
@@ -119,8 +117,41 @@ kthFromEnd(k)
     }
     return false
 }
+
+
+zipLists(list1,list2)
+{
+    let l3 = new Node(0)
+    let current = l3
+
+    let l1= list1.head
+    let l2= list2.head
+
+    while(l1 !== null && l2 !== null)
+    {
+        if(l1 < l2)
+        {
+            current.next = l1
+            l1=l1.next
+        }
+        else
+        {
+            current.next = l2
+            l2 = l2.next
+        }
+        current=current.next
+    }
+    if(l1 !== null)
+    {
+        current.next = l1
+    }
+    else if(l2 !== null)
+    {
+        current.next = l2
+    }
+    return l3.next
+
 }
 
-
-
+}
 module.exports = LinkedList
