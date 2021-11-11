@@ -29,11 +29,11 @@ To run your tests
 | Code challenge 3  |  [code3](cc3-array-binary-search/README.md) |
 | Code challenge 4  |  [code4](cc4-fibonacci/README.md) |
 | Code challenge 5  |  [code5](javascript/linked-list/README.md) |
-| Code challenge 6  |   |
-| Code challenge 7  |   |
-| Code challenge 8  |   |
+| Code challenge 6  |  [code6](javascript/linked-list/README.md) |
+| Code challenge 7  |  [code7](javascript/linked-list/README.md)|
+| Code challenge 8  |  [code8](javascript/linked-list/README.md) |
 | Code challenge 9  |   |
-| Code challenge 10 |   |
+| Code challenge 10 |  [code10](javascript/stack-and-queue/README.md) |
 | Code challenge 11 |   |
 | Code challenge 12 |   |
 | Code challenge 13 |   |
