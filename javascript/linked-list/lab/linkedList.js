@@ -153,5 +153,21 @@ zipLists(list1,list2)
 
 }
 
+ reverse (node)  {
+    let prev = null;
+    let current = node.head;
+    let next = null;
+    let head = node.head;
+    while (current) {
+      next = current.next;
+      current.next = prev;
+      prev = current;
+      current = next;
+    }
+    node.head = prev;
+    node.tail = head;
+    return node;
+  };
+
 }
 module.exports = LinkedList
