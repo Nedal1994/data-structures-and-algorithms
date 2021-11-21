@@ -7,6 +7,7 @@ class BinaryTree {
     constructor(root = null)
     {
         this.root=root
+        // this.data = data
     }
 
     preOrder()
@@ -72,6 +73,37 @@ class BinaryTree {
         traverse(this.root)
         return array
     }
+
+    findMax(value)
+    {
+    if (this.root === null) 
+      {
+            console.log('Empty tree')
+      }
+      let currentNode = this.root;
+      
+      while (currentNode.right !== null) 
+      {
+        currentNode = currentNode.right;
+      }
+         return currentNode.value;
+    }
+
+    findMin(value)
+    {
+    if (this.root === null) 
+      {
+        console.log('Empty tree')
+      }
+      let currentNode = this.root
+      
+      while (currentNode.left !== null) 
+      {
+        currentNode = currentNode.left
+      }
+         return currentNode.value;
+    }
+    
 
     
 
