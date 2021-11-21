@@ -92,5 +92,27 @@ describe('Binary trees',()=>{
 
         expect(tree.postOrder()).toEqual(result)
     })
+    it('It should find the maximum value stored in the tree',()=>{
+        let tree = new BinarySearchTree()
+
+        tree.add(12) 
+        tree.add(21) // maximum value
+        tree.add(7) 
+        tree.add(1) // minimum value
+        tree.add(15)
+
+        expect(tree.findMax()).toEqual(21)
+    })
+    it('It should find the minimum value stored in the tree',()=>{
+        let tree = new BinarySearchTree()
+
+        tree.add(12) 
+        tree.add(21) // maximum value
+        tree.add(7) 
+        tree.add(1) // minimum value
+        tree.add(15)
+
+        expect(tree.findMin()).toEqual(1)
+    })
 
 })
