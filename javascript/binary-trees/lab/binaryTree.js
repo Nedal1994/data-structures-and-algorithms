@@ -1,6 +1,8 @@
 'use strict'
 
 const Node = require('../lab/Node')
+const Queue = require('../../stack-and-queue/lab/queues')
+const Stack = require('../../stack-and-queue/lab/stacks')
 
 class BinaryTree {
 
@@ -103,9 +105,37 @@ class BinaryTree {
       }
          return currentNode.value;
     }
-    
 
-    
+    breadthFirst()
+    {
+        let currentNode = this.root
+
+        if(currentNode === null)
+        {
+            console.log('Empty tree')
+        }
+
+        let array = []
+        let queue = new Queue()
+        queue.enqueue(currentNode)
+
+        while(!queue.isEmpty())
+        {
+            const node = queue.dequeue()
+            array.push(node.value)
+
+            if(node.left)
+            {
+                queue.enqueue(node.left)
+            }
+            if(node.right)
+            {
+                queue.enqueue(node.right)
+            }
+        }
+        return array
+    }
+
 
 }
     

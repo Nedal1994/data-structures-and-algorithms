@@ -49,10 +49,10 @@ describe('Binary trees',()=>{
         -----------
         |         |
         |         |
-        21        7
+        7         21
         |         |
         |         |
-        15        1
+        1         15
 
         */ 
 
@@ -114,5 +114,17 @@ describe('Binary trees',()=>{
 
         expect(tree.findMin()).toEqual(1)
     })
+    it('It should traverse the input tree using a Breadth-first approach',()=>{
+        let tree = new BinarySearchTree()
+
+        tree.add(12) 
+        tree.add(21) // maximum value
+        tree.add(7) 
+        tree.add(1) // minimum value
+        tree.add(15)
+
+        expect(tree.breadthFirst()).toEqual([12,7,21,1,15])
+    })
+
 
 })
