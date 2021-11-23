@@ -2,6 +2,7 @@
 
 const BinaryTree = require('../binaryTree')
 const BinarySearchTree = require('../binarySearchTree')
+const karyTree = require('../k-ary-tree')
 const Node = require('../Node')
 
 let tree = new BinaryTree()
@@ -125,6 +126,4 @@ describe('Binary trees',()=>{
 
         expect(tree.breadthFirst()).toEqual([12,7,21,1,15])
     })
-
-
 })

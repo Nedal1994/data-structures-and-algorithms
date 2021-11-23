@@ -4,6 +4,7 @@
 
 ![code16](code16.png)
 ![code17](code17.png)
+![code18](code18.png)
 
 # Binary trees
 Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.
