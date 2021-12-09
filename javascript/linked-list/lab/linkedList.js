@@ -4,9 +4,9 @@ const Node = require('./Node')
 
 class LinkedList {
     constructor() {
-        this.head = null
-        this.tail = null
-    }
+        this.head = null;
+      }
+    
 
 
 insertBefore(location, newValue)
@@ -35,16 +35,32 @@ insertBefore(location, newValue)
     return null
 }
 
-insert(value)
-{
-    const node = new Node(value)
-    if (this.head) {
-        node.next = this.head
+insert(value) {
+    const node = new Node(value);
+    if (!this.head) {
+      this.head = node;
+      return;
     }
-    this.head = node
-}
 
-insertAfter(value,newValue)
+    let current = this.head;
+    while (current.next) {
+      current = current.next;
+    }
+    current.next = node;
+  }
+
+  values() {
+    let values = [];
+    let current = this.head;
+    while (current) {
+      values.push(current.value);
+      current = current.next;
+    }
+    return values;
+  }
+
+
+insertAfter(newValue)
 {
     let newNode = new Node(newValue)
     let current = this.head
