@@ -1,6 +1,9 @@
 # Hashtables
 Implement a Hashtable Class with the following methods: adding, getting, containg & hashing methods
 
+## Whiteboards
+![code31](code31.PNG)
+
 ## Challenge
 
 * Adding a key/value to your hashtable results in the value being in the data structure
