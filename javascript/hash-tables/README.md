@@ -3,6 +3,7 @@ Implement a Hashtable Class with the following methods: adding, getting, contain
 
 ## Whiteboards
 ![code31](code31.PNG)
+![code32](code32.png)
 
 ## Challenge
 
